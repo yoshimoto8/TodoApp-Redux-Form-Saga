@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Field, reduxForm } from 'redux-form'
-import { Input, Button, Message } from 'semantic-ui-react';
+import { Field, reduxForm, reset } from 'redux-form'
+import { Input, Button, Message } from 'semantic-ui-react'
 import { requestCreate } from '../actions'
 
 
 class TodoForm extends Component{
   locationInput({ input, meta: { touched, error }, ...custom }) {
-    const hasError = touched && error !== undefined;
+    const hasError = touched && error !== undefined
     return (
       <div>
         {hasError &&
@@ -27,7 +27,8 @@ class TodoForm extends Component{
   }
 
   submit(value, dispatch) {
-    dispatch(requestCreate(value));
+    dispatch(requestCreate(value))
+    dispatch(reset('simple'))
   }
   
   render() {

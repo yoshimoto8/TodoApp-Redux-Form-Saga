@@ -1,24 +1,36 @@
-# README
+# Todo List(React/Redux and Rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple todo application using React, Redux, Redux-saga, Redux-form and Rails API
 
-Things you may want to cover:
+### Getting started
 
-* Ruby version
+1. Download the app and setup
 
-* System dependencies
+```
+git clone git@github.com:yoshimoto8/TodoApp-Redux-Form-Saga.git
+cd TodoApp-Redux-Form-Saga
+bundle
+rake db:create
+rake db:migrate
+```
 
-* Configuration
+2. open another terminal
 
-* Database creation
+```
+cd todo-app-redux-saga
+yarn install
+```
 
-* Database initialization
+### starting the app
 
-* How to run the test suite
+1.start rails app
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails s -p 3001
+```
 
-* Deployment instructions
+2.start react app
 
-* ...
+```
+yarn start
+```

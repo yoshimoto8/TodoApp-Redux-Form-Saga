@@ -29,7 +29,6 @@ export function* createData(action) {
 }
 
 export function* deleteData(action) {
-  console.log(action.data)
   const todoId = action.data
   const responseData = yield call(deleteTodoData, todoId)
   if (responseData) {

@@ -15,7 +15,7 @@ class ShowTodo extends Component{
           return (
             <div key={data.id}>
               {data.text}
-              <span onClick={() => this.props.requestDelete(data.id)}>x</span>
+              <span Style="margin-left: 20px; color: red;" onClick={() => this.props.requestDelete(data.id)}>x</span>
             </div>
           )
         })}
